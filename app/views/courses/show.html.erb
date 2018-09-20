@@ -20,5 +20,11 @@
   <%= @course.creditHours %>
 </p>
 
+<ol>
+  <% @course.sections.each do |student| %>
+  <li><%= section.name %></li>
+  <% end %>
+</ol>
+
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
