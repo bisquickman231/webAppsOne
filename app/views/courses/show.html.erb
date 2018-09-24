@@ -21,8 +21,8 @@
 </p>
 
 <ol>
-  <% @course.sections.each do |student| %>
-  <li><%= section.name %></li>
+  <% @course.sections.each do |section| %>
+    <li><%= section.course_id %></li>
   <% end %>
 </ol>
 
