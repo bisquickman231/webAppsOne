@@ -15,16 +15,19 @@ class SectionsController < ApplicationController
   # GET /sections/new
   def new
     @section = Section.new
+    @courses = Course.all
   end
 
   # GET /sections/1/edit
   def edit
+    @courses = Course.all
   end
 
   # POST /sections
   # POST /sections.json
   def create
     @section = Section.new(section_params)
+    params.require(section).permit(:name, :course_ids=>[])
 
     respond_to do |format|
       if @section.save
