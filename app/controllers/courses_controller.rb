@@ -15,16 +15,19 @@ class CoursesController < ApplicationController
   # GET /courses/new
   def new
     @course = Course.new
+    @sections = Section.all
   end
 
   # GET /courses/1/edit
   def edit
+    @sections = Section.all
   end
 
   # POST /courses
   # POST /courses.json
   def create
     @course = Course.new(course_params)
+    params.require(:course).permit(:name, :section_ids=>[])
 
     respond_to do |format|
       if @course.save
