@@ -71,7 +71,8 @@ class SectionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def section_params
+      # this is the combination of the below lines////    params.require(:section).permit(:semester, :number, :course_id, :roomNumber, :name, student_ids=>[])
       params.require(:section).permit(:semester, :number, :course_id, :roomNumber)
-      params.require(:section).permit(:name, student_ids=>[])
+      # this line is breaking shit////    params.require(:section).permit(:name, student_ids=>[])
     end
 end
