@@ -27,6 +27,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 # Use Devise for authentication THIS IS THE ONE ADDED FOR PART 3
 gem 'devise'
+# Use simple-navigation for quick and easy navbar implementation
+gem 'simple-navigation'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
