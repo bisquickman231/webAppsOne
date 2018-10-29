@@ -33,6 +33,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 # Use 'Devise'
 gem 'devise'
+#Use tabs on rails for navbar assistance
+gem 'tabs_on_rails'
+#Round 2 of tab stuff
+gem 'tabulous'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
